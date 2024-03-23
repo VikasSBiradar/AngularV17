@@ -1,0 +1,16 @@
+var box;
+console.log(typeof (box));
+box = "Hello";
+console.log(typeof (box));
+box = 100;
+console.log(typeof (box));
+console.log("Hello".length);
+console.log("Hello".toLocaleLowerCase());
+var name1 = 'Jesse';
+var age = 25;
+var active = true;
+console.log("Name = ", name1);
+console.log("age :", age);
+console.log("Active :", active);
+var names = ['Red', 'Yellow', 'green'];
+console.log("Names :", names);

@@ -40,5 +40,6 @@ let person1 = new Person1('R17CS527','John','Doe');
 console.log("PERSON=" ,person1);
 
 console.log("PERSON.SSN1=", person1.ssn);
+
 console.log("person.firstName=", person1.firstName);
 console.log("person.lastName=", person1.lastName);

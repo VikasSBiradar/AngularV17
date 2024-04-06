@@ -1,0 +1,24 @@
+.firstExample{
+    background-color:  orange;
+}
+
+.secondExample {
+    background-color: green;
+}
+
+.thirdExample {
+    background-color : blue;
+    color : #fff;
+}
+
+.fourthExample {
+    background-color:  red;
+    color : #fff;
+}
+
+.firstFont {
+    font-size : 20px;
+    font-weight : bold;
+    font-style: italic;
+
+}

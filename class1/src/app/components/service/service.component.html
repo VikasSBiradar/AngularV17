@@ -1,1 +1,12 @@
-<p>service works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <section class="col">
+                <p class="my-3" style="color:aqua">Plain html</p>
+                <p class="my-3" [ngStyle]="{'background-color': 'teal'}">This is angular style component</p>
+                <p  class="my-3" [style.color]="highlight">This is third example</p>
+                <p class="my-3" [ngStyle]="hasError ? { 'color' : 'green'} : {'color' : 'red'}">this is style</p>
+            </section>
+        </div>
+    </div>
+</div>

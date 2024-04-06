@@ -4,6 +4,7 @@ import { AboutusComponent } from './components/aboutus/aboutus.component';
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { ProductComponent } from './components/product/product.component';
 import { ServiceComponent } from './components/service/service.component';
+import { HeaderComponent } from './components/header/header.component';
 
 export const routes: Routes = [
     {path :"home", component : IndexComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
     {path : "contact", component : ContactusComponent},
     {path : "product", component : ProductComponent},
     {path : "service", component : ServiceComponent},
+    {path : "header", component : HeaderComponent},
     {path :'', redirectTo: 'home', pathMatch : 'full'}
 ];

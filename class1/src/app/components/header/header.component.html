@@ -1,1 +1,25 @@
-<p>header works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="border lead rounded p-3">
+                <p class="firstExample">This is first example</p>
+                <p [ngClass]="'firstExample'">class component</p>
+                <p [ngClass]="'firstExample firstFont'">This is third component</p>
+
+
+                <p [class]="'secondExample'">This is 4 th example</p>
+                <p [class]='third'>fifth example</p>
+                <p [ngClass]='third'>sixth example</p>
+
+                <p [class]="hasError ? 'secondExample firstFont' : 'fourthExample'"> This is 99 th example</p>
+                <p [ngClass]="hasError ? 'firstExample firstFont' : 'fourthExample'">100 the example</p>
+
+                <button class="btn btn-outline-info" (click)="checkStyle()"> change</button>
+
+                <div class="border rounded p-3 my-3">
+                    <p [ngClass]="addClass">nine example...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

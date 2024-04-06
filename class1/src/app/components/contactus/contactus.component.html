@@ -1,1 +1,11 @@
-<p>contactus works!</p>
+<div class="row">
+    <div class="col-12">
+        <h2>Difference between interpolation and property binding</h2>
+    </div>
+    <div class="form-group p-3 my-3">
+        <input type="text" name="testcase1" id="{{bindId}}" class="form-control" value="INTERPOLATION" disabled="false">
+    </div>
+    <div class="form-group p-3 my-3">
+        <input type="text" name="testcase2" [id]="bindId" class="form-control" value="PROPERTY binding" [disabled]="false">
+    </div>
+</div>

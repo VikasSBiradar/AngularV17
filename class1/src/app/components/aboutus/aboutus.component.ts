@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './aboutus.component.css'
 })
 export class AboutusComponent {
+  title : string = "Epsilon employee details";
+  firstName : string = "Devon";
+  lastName : string = "Conway";
+  mobile : number = 91423215367;
 
+  message = (firstName : string,lastName : string) =>{
+    alert(`Welcome ${firstName} ${lastName}`);
+  }
 }
+
+

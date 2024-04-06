@@ -1,1 +1,30 @@
-<p>aboutus works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="lead p-3 border rounded">
+                <h1>Employee details</h1>
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <p>
+                            <b> First Name :</b>
+                            <span class="float-end">{{firstName}}</span>
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>
+                            <b> last Name :</b>
+                            <span class="float-end">{{lastName}}</span>
+                        </p>
+                    </li>
+                    <li class="list-group-item">
+                        <p>
+                            <b> Mobile :</b>
+                            <span class="float-end">{{mobile}}</span>
+                        </p>
+                    </li>
+                    <button class="btn btn-outline-secondary" (click)="message(firstName,lastName)">Submit</button>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

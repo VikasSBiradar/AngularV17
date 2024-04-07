@@ -1,1 +1,70 @@
-<p>ng-for works!</p>
+<div class="container my-3">
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="my-3 text-warning">Ng-for directive example</h1>
+        </div>
+    </div>
+</div>
+<hr class="text-warning">
+<div class="container my-3">
+    <div class="row">
+        <div class="col">
+            <div class="lead border rounded p-3">
+                <h3>Example-1</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">{{empName}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-2</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of empName">{{item}}</li>
+                </ul>
+
+                <h3 class="mt-4">Example-3</h3>
+                <ul class="list-group">
+                    <li class="list-group-item" *ngFor="let item of empName ; index as x">{{x}}){{item}}</li>
+                </ul>
+                <ul>
+                    @for (user of empName; track empName) {
+                    <li>{{ user}}</li>
+                    } @empty {
+                    <span>Empty list of users</span>
+                    }
+                </ul>
+                <h3 class="mt-4">Example 4</h3>
+                <ul>  @for(user of empName; track empName;let idx = $index, e = $even){
+                    <li>
+                        {{idx}}{{user}}
+                    </li>
+                }
+                </ul>
+                <h3 class="mt-4"Employee></h3>
+                <table class="table table-stripped">
+                    <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Options</th>
+                    </tr>
+                    <tr *ngFor="let item of employee; let i = index">
+                    <td>{{i+1}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.email}}</td>
+                    <td><button class="btn btn-danger" (click)="removeEmployee(i)">Remove employee</button></td>
+                    </tr>
+                </table>
+                <div class="form-group my-3">
+                    <label for="name">Enter name:</label>
+                    <input type="text" name="name" class="form-control" placeholder="name" #name> "Employee" : {{name.value}}
+                </div>
+                <div class="form-group my-3">
+                    <label for="email">Enter email:</label>
+                    <input type="email" name="email" class="form-control" placeholder="email" #email> "Email" : {{email.value}}
+                </div>
+                <div class="form-group my-3">
+                    <button type="button" class="btn btn-outline-success" (click)="addEmployee(name.value,email.value)">Add employee</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

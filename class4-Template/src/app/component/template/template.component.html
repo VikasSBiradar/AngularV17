@@ -1,0 +1,25 @@
+<div class="container my-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="rounded bg-primary p-2 my-3 text-center text-white ">Template reference component</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="lead border rounded p-3">
+                <input type ="text" name="data1" #data1 class="form-control my-2" placeholder="Enter value">
+                <button class="btn btn-outline-primary" (click)="ClickOnButton1(data1)">Click</button>
+                <p class="my-2 p-2"> Result : {{result1}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="lead border rounded p-3">
+                <input type ="text" name="data2" #data2 class="form-control my-2" placeholder="Enter value">
+                <button class="btn btn-outline-primary" (click)="ClickOnButton2(data2.value)">Click</button>
+                <p class="my-2 p-2"> Result : {{result2}}</p>
+            </div>
+        </div>
+    </div>
+</div>

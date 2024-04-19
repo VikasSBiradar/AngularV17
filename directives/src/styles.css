@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.card-success{
+    background-color: #f0f0f0;
+    border : 1px solid #26ff28;
+    border-radius: 8px;
+    width : 200px;
+    height : 130px;
+    padding:20px;
+    box-shadow: 0 2px 6px 0 rgba(38,255,40/35%);
+    color : #403c2f;
+    margin-bottom: 20px;
+}

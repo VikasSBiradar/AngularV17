@@ -1,0 +1,37 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-primary">Custom Pipe</h1>
+        </div>
+    </div>
+</div>
+<div class="contianer my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="border rounded p-3 my-3">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Id</th>
+                            <th> Product</th>
+                            <th> Price</th>
+                            <th> SGST</th>
+                            <th> CGST</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            @for(item of products; track products){
+                                <tr>
+                                    <td>{{item.id}}</td>
+                                    <td>{{item.name}}</td>
+                                    <td>{{item.price | currency :'INR' }}</td>
+                                    <td>{{item.sgst | gstPipe : item.price | currency :'INR'}}</td>
+                                    <td>{{item.cgst | cgst : item.price | currency : 'INR'}}</td>
+                                </tr>
+                            }
+                        </tbody>
+                      </table>
+            </div>
+        </div>
+    </div>
+</div>

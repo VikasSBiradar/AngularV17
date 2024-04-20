@@ -1,0 +1,32 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-primary">BuiltIn Pipe</h1>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="lead border rounded p-3 my-3">
+                <p>{{message}}</p>
+                <p>{{message | lowercase}}</p>
+                <p>{{message | uppercase}}</p>
+                <p>{{message | titlecase}}</p>
+            </div>
+            <div class="lead border rounded p-3 my-3">
+                <p>{{82}}</p>
+                <p>{{82 | percent}}</p>
+                <p>{{82 | currency}}</p>
+            </div>
+            <div class="lead border rounded p-3 my-3">
+                <p>{{data}}</p>
+                <p>{{data | json}}</p>
+            </div>
+            <div class="lead border rounded p-3 my-3">
+                <p>{{date}}</p>
+                <p>{{date | date}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-primary">Chaining Pipe</h1>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="lead border rounded p-3 my-3">
+                <p>{{5678 | currency : 'INR' | uppercase}}</p>
+                <p>{{5678 | currency : 'INR' | lowercase}}</p>
+            </div>
+            <div class="lead border rounded p-3 my-3">
+                <p>{{date | date}}</p>
+                <p>{{date | date | uppercase}}</p>
+                <p>{{date | date | lowercase}}</p>
+                <p>{{date | date | titlecase}}</p>
+            </div>
+            <div class="lead border rounded p-3 my-3">
+                <p>{{datum}}</p>
+                <p>{{datum | json | uppercase}}</p>
+                <p>{{datum | json | lowercase}}</p>
+                <p>{{datum | json | titlecase}}</p>
+            </div>
+        </div>
+    </div>
+</div>

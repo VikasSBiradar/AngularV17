@@ -26,7 +26,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "bootstrap/dist/css/bootstrap.css"
+              "bootstrap/dist/css/bootstrap.css",
+              "bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [
               "bootstrap/dist/js/bootstrap.bundle.js"

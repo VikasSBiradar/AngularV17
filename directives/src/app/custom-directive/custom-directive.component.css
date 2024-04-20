@@ -1,0 +1,11 @@
+.top-icon{
+    position: fixed;
+    bottom : 0%;
+    right : 5%;
+    cursor:pointer;
+    transition: 0.5s all ease-in-out;
+}
+
+.top-icon:hover{
+    transform: scale(1.1);
+}

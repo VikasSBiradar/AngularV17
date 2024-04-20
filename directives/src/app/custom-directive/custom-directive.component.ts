@@ -5,7 +5,7 @@ import { ScrollToTopDirective } from '../directive/scroll-to-top.directive';
 @Component({
   selector: 'app-custom-directive',
   standalone: true,
-  imports: [SimpleDirectiveDirective],
+  imports: [SimpleDirectiveDirective,ScrollToTopDirective],
   templateUrl: './custom-directive.component.html',
   styleUrl: './custom-directive.component.css'
 })

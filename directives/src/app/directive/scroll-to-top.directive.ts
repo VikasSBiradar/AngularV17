@@ -1,4 +1,4 @@
-import { Directive } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appScrollToTop]',
@@ -6,6 +6,10 @@ import { Directive } from '@angular/core';
 })
 export class ScrollToTopDirective {
 
-  constructor() { }
+  constructor(private el : ElementRef) { }
+
+  @HostListener('click') OnClick(){
+    window.scrollTo({top : 0, behavior:'smooth'});
+  }
 
 }

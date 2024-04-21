@@ -1,0 +1,36 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-primary">Assignment pipe</h1>
+        </div>
+    </div>
+</div>
+<div class="contianer my-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="border rounded p-3 my-3">
+                    <table class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>EmployeeID</th>
+                            <th>Name</th>
+                            <th>Salary</th>
+                            <th>Is eligible for PF</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                            @for(employee of employeeDetails; track employeeDetails){
+                                <tr>
+                                    <td>{{employee.EmployeeId}}</td>
+                                    <td>{{employee.Gender | gender : employee.Gender}} {{employee.Name}}</td>
+                                    <td>{{employee.Salary | currency :'INR' }}</td>
+                                    <td>{{employee.Salary | pf : employee.Salary}}</td>
+                                </tr>
+                            }
+                        </tbody>
+                      </table>
+            </div>
+        </div>
+    </div>
+</div>
+

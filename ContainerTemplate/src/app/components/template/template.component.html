@@ -1,1 +1,156 @@
-<p>template works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col text-center">
+            <h1>Ng-Template</h1>
+            <p>Code Reusability</p>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <div class="lead border py-3 my-3">
+                <h2>Example-1</h2>
+                <ng-template>
+                    <h2>Hello ng-template</h2>
+                    <p>Here it is not possible to display the result becuase ng-template is depending in structural directive(ngFor, ngIf, ngSwitch)</p>
+                </ng-template>
+            </div>
+            <div class="lead border py-3 my-3">
+                <h2>Example-2</h2>
+                <div *ngIf="example2">
+                    <p>Logged in successfully</p>
+                </div>
+                <ng-template *ngIf="example2">
+                <h2>Hello ng-template</h2>
+                <p>Here it is not possible to display the result becuase directly we are calling structural directive</p>
+                </ng-template>
+            </div>
+            <div class="lead border p-3 my-3">
+                <h2>Example-3</h2>
+                <button class="btn btn-outline-primary" (click)="example3Click()"> {{example3 ? true : false}}</button>
+                <div *ngIf="example3 else temp">
+                    <p>Logged in successfully</p>
+                
+                </div>
+                <ng-template #temp>
+                    <h2>Hello ng-templaye</h2>
+                    <p>Here it is possibel to display the result</p>
+                </ng-template>
+            </div>
+
+            <div class="lead border p-3 my-3">
+                <h2>Example-4</h2>
+                <ng-template #user>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quidem illum architecto consequuntur vero odio molestias necessitatibus adipisci quasi ipsa doloremque exercitationem libero amet, corporis, quaerat hic dignissimos, officia illo.</p>
+                </ng-template>
+                <ng-container *ngTemplateOutlet="user"></ng-container>
+                <ng-container *ngTemplateOutlet="user"></ng-container>
+                <ng-container *ngTemplateOutlet="user"></ng-container>
+                <ng-container *ngTemplateOutlet="user"></ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #email let-email="NgEmail" let-name="NgName">
+    <div class="card-body">
+        <ul class="list-group">
+                <li class="list-group-item">
+                    <p><b>Email</b>
+                    <span class="float-end">{{email ? email : "example3@gmail.com"}}</span>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p><b>Name</b>
+                    <span class="float-end">{{name ? name : "Eaxmple"}}</span>
+                    </p>
+                </li>
+                <li class="list-group-item">
+                    <p><b>Mobile</b>
+                    <span class="float-end">8142381423</span>
+                    </p>
+                </li>
+        </ul>
+    </div>
+</ng-template>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1>Example-6</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Card-1</h5>
+                </div>
+                <ng-container *ngTemplateOutlet="email"></ng-container>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Card-2</h5>
+                </div>
+                <ng-container *ngTemplateOutlet="email"></ng-container>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Card-3</h5>
+                </div>
+                <ng-container *ngTemplateOutlet="email; context:{NgEmail:'angular@gmail.com',NgName:'angular'}"></ng-container>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #contact let-data="Data">
+    <div class="card-body">
+        <ul class="group-item">
+            <li class="list-group-item">
+                    <p><b>Name</b><span class="float-end">{{data?.name ? data?.name : "Eample2"}}</span></p>
+            </li>
+            <li class="list-group-item">
+                <p><b>Email</b><span class="float-end">{{data?.Email ? data?.Email : "Eample2@gmail.com"}}</span></p>
+            </li>
+        </ul>
+    </div>
+</ng-template>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1>Example-7</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Card-1</h5>
+                </div>
+                <ng-container *ngTemplateOutlet="contact"></ng-container>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Card-2</h5>
+                </div>
+                <ng-container *ngTemplateOutlet="contact"></ng-container>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5>Card-3</h5>
+                </div>
+                <ng-container *ngTemplateOutlet="contact; context:{Data : {name:'AngularV17', Email:'angularv17@gmail.com'}}"></ng-container>
+            </div>
+        </div>
+    </div>
+</div>

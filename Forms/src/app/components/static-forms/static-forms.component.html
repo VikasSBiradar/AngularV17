@@ -2,6 +2,10 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-2 col-lg-8 offset-xl-2 col-xl-8 offset-xxl-2 col-xxl-8">
             <div class="lead border p-3 rounded shadow">
+                <div class="alert alert-danger" *ngIf="submitted">
+                    <strong>Check it out</strong>
+                    <p>{{errorMessage}}</p>
+                </div>
                 <form autocomplete="off" #useForm="ngForm" (ngSubmit)="userFormData(useForm.value)">
                     <div class="form my-3 bg-success p2 rounded">
                         <h2 class="text-center text-white">Static forms</h2>

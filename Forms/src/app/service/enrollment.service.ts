@@ -8,7 +8,7 @@ import { throwError } from 'rxjs';
 })
 export class EnrollmentService {
 
-  private URL : string = 'http://localhost:3000/';
+  private URL : string = 'http://localhost:3000';
 
   httpOptions = {
     headers : new HttpHeaders({

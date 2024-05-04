@@ -14,8 +14,8 @@ app.get("/", (req,res) => {
 })
 
 app.post("/enroll", function(req,res){
-    res.send("Hello from Server..!");
-    console.log(req.Body);
+    //res.send("Hello from Server..!");
+    //console.log(req.body);
     res.status(401).send({message:"Data recieved"});
 })
 

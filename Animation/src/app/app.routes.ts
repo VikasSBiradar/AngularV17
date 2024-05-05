@@ -7,7 +7,7 @@ import { PnfComponent } from './components/pnf/pnf.component';
 export const routes: Routes = [
     {path : 'animation1', component : Animation1Component},
     {path : 'animation2', component : Animation2Component},
-    {path : 'animation2', component : Animation3Component},
+    {path : 'animation3', component : Animation3Component},
     {path :'', pathMatch:'full', redirectTo:'animation1'},
     {path:'**', component : PnfComponent}
 ];

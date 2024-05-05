@@ -1,1 +1,10 @@
-<p>animation1 works!</p>
+<div class="container my-5">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-danger text-center">Arcing Ball Animation</h1>
+            <button class="btn btn-success" (click)="toggleBounce()">Arc</button>
+            <div class="ball" [@animateArc]="arc"></div>
+        </div>
+    </div>
+</div>
+

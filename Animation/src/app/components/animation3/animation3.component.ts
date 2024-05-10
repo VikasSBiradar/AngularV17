@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
           padding:'30px'
       })),
       state('signup', style({
-        backgroundColor:'red',
+        backgroundColor:'magenta',
         color:'#fff',
         padding:'30px'
     })),

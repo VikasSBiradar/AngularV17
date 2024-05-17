@@ -26,4 +26,8 @@ export class AppComponent {
     console.log(`inputVal=${this.inputVal}`);
 
   }
+
+  destroyComponent():void{
+    this.toDestroy = !this.toDestroy;
+  }
 }

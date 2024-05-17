@@ -20,9 +20,12 @@
         </div>
       </div>
       <div class="form-group my-3">
-        <app-child [message]="inputVal">
+        <app-child [message]="inputVal" *ngIf="!toDestroy">
             <h3>User has entered following text : {{inputVal}}</h3>
         </app-child>
+      </div>
+      <div class="form-group my-3">
+        <button class="btn btn-outline-danger" (click)="destroyComponent()">Hide/Show</button>
       </div>
     </div>
   </div>
